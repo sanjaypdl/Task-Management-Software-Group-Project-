@@ -2,8 +2,8 @@
 
 
 This is a Group Project for our Assignment. Our group members are:
-Sanjay
-Bikash
+Sanjay,
+Bikash,
 Abhinash and
 Suraj
 
