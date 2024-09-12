@@ -1,9 +1,10 @@
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 header {
@@ -11,13 +12,11 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-h1{
-    text-align: center;
-    
-    
-}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -37,28 +36,35 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .container {
     width: 85%;
     max-width: 1200px;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
     background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 table, th, td {
@@ -68,12 +74,15 @@ table, th, td {
 th, td {
     padding: 15px;
     text-align: left;
+    font-size: 16px;
 }
 
 th {
     background-color: #007bff;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 tr:nth-child(even) {
@@ -82,24 +91,32 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: all 0.2s ease;
 }
 
 td a {
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 td a:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Form Styling */
 form {
     max-width: 600px;
     margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form label {
@@ -107,6 +124,7 @@ form label {
     margin-top: 20px;
     font-size: 16px;
     font-weight: bold;
+    color: #333;
 }
 
 form input, form textarea, form select {
@@ -121,9 +139,10 @@ form input, form textarea, form select {
 
 form input:focus, form textarea:focus, form select:focus {
     border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
 
-form input[type="submit"] {
+form input[type="submit"], input[type="reset"] {
     background-color: #28a745;
     color: white;
     border: none;
@@ -131,54 +150,52 @@ form input[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
     margin-top: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="reset"] {
+    background-color: #dc3545;
 }
 
 form input[type="submit"]:hover {
     background-color: #218838;
-}
-
-input[type="reset"] {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 input[type="reset"]:hover {
     background-color: #c82333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Button Styling */
 button {
     background-color: #007bff;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Link Styling */
 a {
     color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s;
 }
 
 a:hover {
     color: #0056b3;
+    transform: scale(1.02);
 }
 
 /* Responsive Design */
@@ -197,6 +214,6 @@ a:hover {
     }
 
     .container {
-        padding: 15px;
+        padding: 20px;
     }
 }
